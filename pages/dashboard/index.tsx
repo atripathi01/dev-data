@@ -8,6 +8,7 @@ import sampleData from '../../data/sampleData.json';
 import DayWiseActivityChart from '@/components/pagecomponents/DayWiseActivityChart';
 import ActiveDaysPieChart from '@/components/pagecomponents/ActiveDaysPieChart';
 import InsightsPieChart from '@/components/pagecomponents/InsightsPieChart';
+import Link from 'next/link';
 
 const Dashboard = () => {
   const data = sampleData?.data;
@@ -38,7 +39,7 @@ const Dashboard = () => {
             <CardComponent>
               <div className='flex justify-between items-center'>
                 <p className='text-lg text-gray-700'>Total Activity Chart</p>
-                <a href='/dashboard/totalActivity'>
+                <Link href='/dashboard/totalActivity'>
                   <p className='text-gray-100 cursor-pointer rounded-md flex justify-center items-center hover:bg-[#5570F1] py-1 px-3 bg-black'>
                     View Detail Data
                     <span>
@@ -46,7 +47,7 @@ const Dashboard = () => {
                       <ChevronRight className='' />
                     </span>
                   </p>
-                </a>
+                </Link>
               </div>
               <div className='py-4 '>
                 <TotalActivityChart data={data} />
@@ -74,7 +75,7 @@ const Dashboard = () => {
             <CardComponent>
               <div className='flex justify-between items-center'>
                 <p className='text-lg text-gray-700'>Day Wise Activity Chart</p>
-                <a href='/dashboard/dayWiseActivity'>
+                <Link href='/dashboard/dayWiseActivity'>
                   {' '}
                   <p className='text-gray-100 cursor-pointer rounded-md flex justify-center items-center hover:bg-[#5570F1] py-1 px-3 bg-black'>
                     View Detail Data
@@ -83,7 +84,7 @@ const Dashboard = () => {
                       <ChevronRight className='' />
                     </span>
                   </p>
-                </a>
+                </Link>
               </div>
               <div className='py-4 '>
                 <DayWiseActivityChart data={data} />

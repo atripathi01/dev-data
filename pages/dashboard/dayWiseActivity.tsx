@@ -5,6 +5,7 @@ import React from 'react';
 import sampleData from '../../data/sampleData.json';
 import DayWiseActivityTable from '@/components/pagecomponents/DayWiseActivityTable';
 import { ChevronRight } from '@mui/icons-material';
+import Link from 'next/link';
 
 const DayWiseActivity = () => {
   const data = sampleData?.data;
@@ -17,7 +18,7 @@ const DayWiseActivity = () => {
         {' '}
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <a href='/dashboard'>
+            <Link href='/dashboard'>
               {' '}
               <p className='text-gray-100 cursor-pointer rounded-md flex justify-center items-center hover:bg-[#5570F1] py-1 px-3 bg-black w-fit'>
                 <span>
@@ -26,7 +27,7 @@ const DayWiseActivity = () => {
                 </span>
                 Back to Dashbaord
               </p>
-            </a>
+            </Link>
           </Grid>
           <Grid item xs={12}>
             <CardComponent>
