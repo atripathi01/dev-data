@@ -18,23 +18,7 @@ const Dashboard = () => {
       <CustomNavbar title='Dashboard' />
       <div className='p-2'>
         <Grid container spacing={1}>
-          <Grid item xs={12} className='min-h-fit' lg={12}>
-            <CardComponent>
-              <div className='flex justify-between items-center'>
-                <p className='text-lg text-gray-700'>Day Wise Activity Chart</p>
-                <p className='text-gray-400'>
-                  last 7 days{' '}
-                  <span>
-                    {' '}
-                    <ChevronRight className='rotate-90' />
-                  </span>
-                </p>
-              </div>
-              <div className='py-4 '>
-                <InsightsPieChart data={data} />
-              </div>
-            </CardComponent>
-          </Grid>
+       
           <Grid item xs={12} className='min-h-fit' lg={6}>
             <CardComponent>
               <div className='flex justify-between items-center'>
@@ -88,6 +72,23 @@ const Dashboard = () => {
               </div>
               <div className='py-4 '>
                 <DayWiseActivityChart data={data} />
+              </div>
+            </CardComponent>
+          </Grid>
+          <Grid item xs={12} className='min-h-fit' lg={12}>
+            <CardComponent>
+              <div className='flex justify-between items-center'>
+                <p className='text-lg text-gray-700'>Day Wise Activity Chart</p>
+                <p className='text-gray-400'>
+                  last 7 days{' '}
+                  <span>
+                    {' '}
+                    <ChevronRight className='rotate-90' />
+                  </span>
+                </p>
+              </div>
+              <div className='py-4 '>
+                <InsightsPieChart data={data} />
               </div>
             </CardComponent>
           </Grid>
